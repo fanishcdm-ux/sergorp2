@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sergorp – Voice Mirror</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-root">
+    <header class="app-header">
+      <div class="logo-dot"></div>
+      <div class="header-title">Sergorp</div>
+      <div class="header-mode-toggle">
+        <button id="modeToday" class="mode-btn active">Today</button>
+        <button id="modeWeek" class="mode-btn">7 Days</button>
+      </div>
+    </header>
 
+    <main class="app-main">
+      <section class="canvas-wrapper">
+        <canvas id="todayCanvas"></canvas>
+        <canvas id="weekCanvas" class="hidden"></canvas>
+      </section>
+
+      <section class="bottom-bar">
+        <button id="recordBtn" class="record-btn">
+          <span class="record-circle"></span>
+        </button>
+        <div class="record-info" id="recordInfo"></div>
+      </section>
+    </main>
+
+    <div id="tooltip" class="tooltip hidden"></div>
+
+    <audio id="player" class="hidden"></audio>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
